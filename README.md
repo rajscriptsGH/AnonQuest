@@ -74,11 +74,11 @@ MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/anonquest
 
 ## 🔗 Connect With Me
 
-- 🌐 Portfolio
-
-- 🐦 Twitter
-
-- 💻 GitHub
+<p align="center">
+  <a href="https://rajscripts.com">🌐 Portfolio</a> •
+  <a href="https://twitter.com/rajscriptsX">🐦 Twitter</a> •
+  <a href="https://github.com/rajscriptsGH">💻 GitHub</a>
+</p>
 
 <p align="center">
   MIT License © 2025 <a href="https://github.com/rajscriptsGH">Raj Yadav</a> <br />
