@@ -1,4 +1,4 @@
-import { email, z } from "zod";
+import { z } from "zod";
 
 //validate username
 export const usernameValidation = z
@@ -22,7 +22,7 @@ export const passwordValidation = z
     .max(12, { message: "Username must be less than 12 characters" })
     .trim()
 
-export const signUpSchema = z.object({
+export const SignUpSchema = z.object({
     username: usernameValidation,
     email: emailValidation,
     password: passwordValidation
