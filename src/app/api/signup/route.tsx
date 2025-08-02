@@ -17,10 +17,7 @@ export async function SignUp(request: Request) {
             return Response.json({
                 success: false,
                 message: "User already exits"
-            },
-                {
-                    status: 400,
-                }
+            }, { status: 400 }
             )
         }
 
@@ -36,10 +33,7 @@ export async function SignUp(request: Request) {
                 return Response.json({
                     success: false,
                     message: "Email already exits"
-                },
-                    {
-                        status: 400,
-                    }
+                }, { status: 400 }
                 )
             } else {
                 existingUserByEmail.password = hashPassword;
@@ -64,6 +58,7 @@ export async function SignUp(request: Request) {
                 messages: []
             })
 
+            await newUser.save();
             await sendVerificationEmail(email, username, verifyCode);
 
             return Response.json({
@@ -77,10 +72,7 @@ export async function SignUp(request: Request) {
         return Response.json({
             success: false,
             message: "There is some error registering, try again later",
-        },
-            {
-                status: 500
-            }
+        }, { status: 500 }
         )
 
     }
